@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+var wind_ = $(window).width() <= 767;
   /* ~~~~~~~~~~~~~~~~~~start header~~~~~~~~~~~~~~~~~~~ */
   if ($(window).width() <= 767) {
     $(".btn_bars").click(function(){
@@ -23,25 +23,26 @@ $(document).ready(function(){
     $(".moboverlay").fadeOut(500);
     $("body").removeClass("over");
   })
-  jQuery(window).on('scroll', function() {
-    if(jQuery(window).scrollTop() > 20) {
-        jQuery('header').css({
+  $(window).on('scroll', function() {
+    if($(window).scrollTop() > 0) {
+      $('header').css({
             "background-color": "#ffff",
           });
-          jQuery('header .logo img').attr('src','images/logo1.png');
+          $('header .logo img').attr('src','images/logo1.png');
           $('.anc_lang, .ul_navbar li a, .btn_bars').css('color','#000000');
 
     } else {
-      jQuery('header').css({
+      $('header').css({
         "background-color":"unset",
         
       });
       $('.anc_lang, .ul_navbar li a, .btn_bars').css('color','#ffffff');
   
-      jQuery('header .logo img').attr('src','images/logo2.png')
+      $('header .logo img').attr('src','images/logo2.png')
     }
+
   });
-  
+
   /* ~~~~~~~~~~~~~~~~~~end header~~~~~~~~~~~~~~~~~~~ */
   
     /*~~~~~~~~~~~~~~~~~~~~start slider~~~~~~~~~~~~~~~~~~~~ */
