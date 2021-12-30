@@ -109,7 +109,7 @@ $(document).ready(function(){
       'top: 0; transition: .5s;'
     } else {
       fixedBar.style.cssText = 
-      'top: -100px; transition:.5s;'
+      'top: -100%; transition:.5s;'
   
     }
     prevScrollpos = currentScrollPos;
